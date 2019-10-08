@@ -13,7 +13,7 @@ def todays_date():
 
 
 def macaddress():
-    print('\033[30;0;44m MAC Address in HEX\t\t:\033[31;1;40m ', hex(uuid.getnode()),'\033[0m')
+    print('\033[30;0;44m MAC Address in HEX\t:\033[31;1;40m ', hex(uuid.getnode()),'\033[0m')
     #print(" add :--", end="")
     #print("\033[31;1;40m The MAC Address is formatted way is :", end="")
     #print(': '.join(['{:02x}'.format((uuid.getnode() >> ele) & 0xff) for ele in range(0,8*6,8)][::-1]))
@@ -29,13 +29,14 @@ def get_system_IP():
     return s.getsockname()[0]
 
 def welcome():
-    print('     \033[0;32;47m WELCOME\033[0m\n'
-          '       \033[0;34;47m TO\033[0m   \n'
-          '\033[0;31;47m FORTIFY SOLUTIONS\033[0m\n')
+    print('     \033[1;32;47m WELCOME\033[0m\n'
+          '       \033[1;34;47m TO\033[0m   \n'
+          '\033[1;31;47m FORTIFY SOLUTIONS\033[0m\n')
 
 
 def option_lists():
     print('The options are:-')
+    print('\033[2;31;40m================================================\033[0m')
     print('[1]System infomation\t\t[2] machine infomation\n'
           '[3]version infomation\t\t[4] uname infomation\n'
           '[5]processor infomation\t\t[6] platform infomation\n'
@@ -43,6 +44,7 @@ def option_lists():
           '[9]python version infomation\t[10] release infomation\n'
           '[11]system version infomation\t[12] system version infomation\n'
           '[13] All Parameters\t[14] EXIT\n')
+    print('\033[2;31;40m================================================\033[0m')
 
 
 
@@ -55,10 +57,11 @@ option_lists()
 
 while True:
     try:
-        x = int(input('Enter your selection :'))
+        x = int(input('Enter your option :'))
     except ValueError:
         todays_date()
         print('Enter Valid INPUT')
+
     if x == 1:
         print(f'System info: {platform.system()}')  # Linux
     elif x==2:
@@ -99,7 +102,7 @@ while True:
         print(f'System version info: {platform._sys_version()}')
         print(f'System version info: {platform.mac_ver()}')
     elif x == 14:
-        print('Thank You')
+        print('\033[1;30;42m Thank You....HAVE A NICE TIME!!!!! \033[0m\n\n\033[1;31;40m Fortify Solutions\033[0m')
         todays_date()
         break
     elif x >= 15:
