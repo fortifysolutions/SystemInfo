@@ -32,6 +32,8 @@ def welcome():
     print('     \033[1;32;47m WELCOME\033[0m\n'
           '       \033[1;34;47m TO\033[0m   \n'
           '\033[1;31;47m FORTIFY SOLUTIONS\033[0m\n')
+    print('\033[0;31;40m\n <<<This Program is to Get the Your System Informations>>>\n\n'
+          '\033[0m \n')
 
 
 def option_lists():
@@ -43,14 +45,15 @@ def option_lists():
           '[7]architecture infomation\t[8] Node infomation\n'
           '[9]python version infomation\t[10] release infomation\n'
           '[11]system version infomation\t[12] system version infomation\n'
-          '[13] All Parameters\t[14] EXIT\n')
+          '[13]IP Address\t\t[14] MAC Address\n'
+          '[15] All Parameters\t\t[16] EXIT\n')
     print('\033[2;31;40m================================================\033[0m')
 
 
 
 welcome()
-macaddress()
-get_system_IP()
+#macaddress()
+#get_system_IP()
 todays_date()
 #calander()
 option_lists()
@@ -86,7 +89,7 @@ while True:
         print(f'System version info: {platform._sys_version()}')
     elif x==12:
         print(f'system version info: {platform.mac_ver()}')
-    elif x==13:
+    elif x==15:
         #platform
         # — Access to underlying platform’s identifying data
         print(f'System info: {platform.system()}') #Linux
@@ -101,10 +104,14 @@ while True:
         print(f'Release info: {platform.release()}')
         print(f'System version info: {platform._sys_version()}')
         print(f'System version info: {platform.mac_ver()}')
+    elif x == 13:
+        get_system_IP()
     elif x == 14:
+        macaddress()
+    elif x == 16:
         print('\033[1;30;42m Thank You....HAVE A NICE TIME!!!!! \033[0m\n\n\033[1;31;40m Fortify Solutions\033[0m')
         todays_date()
         break
-    elif x >= 15:
-        print('Please select input from 1 to 14')
+    elif x >= 17:
+        print('Please select input from 1 to 16')
         option_lists()
