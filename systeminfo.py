@@ -32,7 +32,7 @@ def welcome():
     print('     \033[1;32;47m WELCOME\033[0m\n'
           '       \033[1;34;47m TO\033[0m   \n'
           '\033[1;31;47m FORTIFY SOLUTIONS\033[0m\n')
-    print('\033[0;31;40m\n <<<This Program is to Get the Your System Informations>>>\n\n'
+    print('\033[0;31;40m\n <<<This Program is to Get the Your System Information>>>\n\n'
           '\033[0m \n')
 
 
