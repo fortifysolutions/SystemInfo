@@ -29,10 +29,9 @@ def get_system_IP():
     return s.getsockname()[0]
 
 def welcome():
-    print('     \033[1;32;47m WELCOME\033[0m\n'
-          '       \033[1;34;47m TO\033[0m   \n'
+    print('     \033[1;32;47m WELCOME\033[0m\033[1;34;47m TO\033[0m'
           '\033[1;31;47m FORTIFY SOLUTIONS\033[0m\n')
-    print('\033[0;31;40m\n <<<This Program is to Get the Your System Information>>>\n\n'
+    print('\033[0;31;40m\n <<This Program is to Get Your System Information>>\n\n'
           '\033[0m \n')
 
 
@@ -61,6 +60,7 @@ option_lists()
 while True:
     try:
         x = int(input('Enter your option :'))
+        time.sleep(1)
     except ValueError:
         todays_date()
         print('Enter Valid INPUT')
@@ -92,16 +92,16 @@ while True:
     elif x==15:
         #platform
         # — Access to underlying platform’s identifying data
-        print(f'System info: {platform.system()}') #Linux
-        print(f'Machine info: {platform.machine()}') #x86_64 Returns the machine type, e.g. 'i386'. An empty string is returned if the value cannot be determined.
-        print(f'Version info: {platform.version()}') #1 SMP Debian 4.19.28-2kali1 (2019-03-18)
-        print(f'uname info: {platform.uname()}') #uname_result(system='Linux', node='FortifySolutions', release='4.19.0-kali4-amd64', version='#1 SMP Debian 4.19.28-2kali1 (2019-03-18)', machine='x86_64', processor='')
-        print(f'Processor info: {platform.processor()}')
-        print(f'Platform info: {platform.platform()}')
+        print(f'System info     : {platform.system()}') #Linux
+        print(f'Machine info    : {platform.machine()}') #x86_64 Returns the machine type, e.g. 'i386'. An empty string is returned if the value cannot be determined.
+        print(f'Version info    : {platform.version()}') #1 SMP Debian 4.19.28-2kali1 (2019-03-18)
+        print(f'uname info      : {platform.uname()}') #uname_result(system='Linux', node='FortifySolutions', release='4.19.0-kali4-amd64', version='#1 SMP Debian 4.19.28-2kali1 (2019-03-18)', machine='x86_64', processor='')
+        print(f'Processor info  : {platform.processor()}')
+        print(f'Platform info   : {platform.platform()}')
         print(f'Architecture info: {platform.architecture()}')
-        print(f'Node info: {platform.node()}')
+        print(f'Node info       : {platform.node()}')
         print(f'Python version info: {platform.python_version()}')
-        print(f'Release info: {platform.release()}')
+        print(f'Release info    : {platform.release()}')
         print(f'System version info: {platform._sys_version()}')
         print(f'System version info: {platform.mac_ver()}')
     elif x == 13:
@@ -109,7 +109,7 @@ while True:
     elif x == 14:
         macaddress()
     elif x == 16:
-        print('\033[1;30;42m Thank You....HAVE A NICE TIME!!!!! \033[0m\n\n\033[1;31;40m Fortify Solutions\033[0m')
+        print('\033[1;31;42m Thank You....HAVE A NICE TIME!!!!! \033[0m\n\n\033[1;31;40m Fortify Solutions\033[0m')
         todays_date()
         break
     elif x >= 17:
