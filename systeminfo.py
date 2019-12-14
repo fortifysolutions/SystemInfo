@@ -3,6 +3,15 @@ import uuid
 import socket
 import time
 import calendar
+import os
+
+def clr():
+    if os.name=='nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+
+clr()
 
 
 def calander(): print(calendar.month(2019,10))
@@ -122,6 +131,7 @@ while True:
     elif x == 14:
         macaddress()
     elif x == 16:
+        clr()
         print('\033[1;31;42m Thank You....HAVE A NICE TIME!!!!! \033[0m\n\n\033[1;31;40m Fortify Solutions\033[0m')
         todays_date()
         break
